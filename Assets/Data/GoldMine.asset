@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2584baaf2926ee44d9c78f5fd90903b4, type: 3}
+  m_Name: GoldMine
+  m_EditorClassIdentifier: Assembly-CSharp::BuildingDefinition
+  displayName: Gold Mine
+  sprite: {fileID: 5731634118269906917, guid: 8c462563b3cdcde4ca14850612dfbe02, type: 3}
+  baseGoldPerTick: 5
+  baseUpgradeCost: 50
+  baseUpgradeSeconds: 5
