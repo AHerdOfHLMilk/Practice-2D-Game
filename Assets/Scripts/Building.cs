@@ -21,6 +21,19 @@ public class Building : MonoBehaviour
         }
     }
 
+    public bool TryStartUpgrade()
+    {
+        int cost = definition.UpgradeCostToReach(Level + 1);
+        if (IsUpgrading || !ResourceManager.Instance.TrySpendGold(cost)) //ordering matters, 
+        //reverse would spend first before check if upgrading
+        {
+            return false;
+        }
+        IsUpgrading = true;
+        UpgradeSecondsRemaining = definition.UpgradeSecondsToReach(Level + 1);
+        return true;
+    }
+
     private void Update()
     {
         if(!IsUpgrading)
