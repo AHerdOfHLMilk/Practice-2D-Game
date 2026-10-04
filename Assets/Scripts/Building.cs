@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Building : MonoBehaviour
@@ -8,6 +9,7 @@ public class Building : MonoBehaviour
     public int Level { get; private set; } = 1;
     public bool IsUpgrading { get; private set; }
     public float UpgradeSecondsRemaining { get; private set; }
+    public event Action OnUpgradeCompleted;
 
     public int GoldPerTick
     {
@@ -48,6 +50,7 @@ public class Building : MonoBehaviour
         {
             Level += 1;
             IsUpgrading = false;
+            OnUpgradeCompleted?.Invoke();
         }
     }
 }
